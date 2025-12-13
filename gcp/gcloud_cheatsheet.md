@@ -1,0 +1,112 @@
+# Google Cloud Platform (gcloud) Cheat Sheet
+
+This document serves as a quick reference for common `gcloud` commands, focusing on configuration, compute instances, and infrastructure exploration.
+
+## 1. Configuration Management (`gcloud config`)
+
+Manage your active project, region, zone, and authentication settings.
+
+| Command | Description |
+| :--- | :--- |
+| `gcloud config list` | Show all properties in your active configuration. |
+| `gcloud config configurations list` | List all available named configurations. |
+| `gcloud config configurations activate [CONFIGURATION_NAME]` | Activate an existing named configuration. |
+| `gcloud config configurations describe [CONFIGURATION_NAME]` | Describe the attributes of a specific configuration. |
+| `gcloud config set project [PROJECT_ID]` | Set the project for the current configuration. |
+
+**Example:**
+```bash
+gcloud config configurations list
+gcloud config configurations activate my-default-configuration
+gcloud config list
+gcloud config configurations describe my-second-configuration
+```
+
+## 2. Compute Instances (`gcloud compute instances`)
+
+Create, list, and manage virtual machine instances.
+
+| Command | Description |
+| :--- | :--- |
+| `gcloud compute instances list` | List all instances in the current project. |
+| `gcloud compute instances create [INSTANCE_NAME]` | Create a new instance with default settings. |
+| `gcloud compute instances describe [INSTANCE_NAME]` | Display details of a specific instance. |
+| `gcloud compute instances delete [INSTANCE_NAME]` | Delete a specific instance. |
+
+**Example:**
+```bash
+gcloud compute instances list
+gcloud compute instances create my-first-instance-from-gcloud
+gcloud compute instances describe my-first-instance-from-gcloud
+gcloud compute instances delete my-first-instance-from-gcloud
+```
+
+## 3. Zones and Regions (`gcloud compute zones/regions`)
+
+Explore available geographic locations for your resources.
+
+| Command | Description |
+| :--- | :--- |
+| `gcloud compute zones list` | List all available zones. |
+| `gcloud compute regions list` | List all available regions. |
+| `gcloud compute regions describe [REGION]` | Display details about a specific region. |
+| `gcloud compute zones list --filter="region:[REGION]"` | List zones within a specific region. |
+| `gcloud compute zones list --sort-by=[FIELD]` | Sort the list of zones by a field (e.g., `region`). |
+| `gcloud compute zones list --uri` | List the URIs of all zones. |
+
+**Example:**
+```bash
+gcloud compute zones list
+gcloud compute regions list
+gcloud compute regions describe us-west4
+gcloud compute zones list --filter=region:us-west2
+gcloud compute zones list --sort-by=region
+gcloud compute zones list --sort-by=~region
+gcloud compute zones list --uri
+```
+
+## 4. Machine Types (`gcloud compute machine-types`)
+
+Explore available hardware configurations for your instances.
+
+| Command | Description |
+| :--- | :--- |
+| `gcloud compute machine-types list` | List all available machine types. |
+| `gcloud compute machine-types list --filter="zone:[ZONE]"` | List machine types available in a specific zone. |
+
+**Example:**
+```bash
+gcloud compute machine-types list
+gcloud compute machine-types list --filter zone:asia-southeast2-b
+gcloud compute machine-types list --filter "zone:(asia-southeast2-b asia-southeast2-c)"
+```
+
+## 5. Instance Templates (`gcloud compute instance-templates`)
+
+Manage templates for creating instances with identical configurations.
+
+| Command | Description |
+| :--- | :--- |
+| `gcloud compute instance-templates list` | List all instance templates. |
+| `gcloud compute instance-templates create [TEMPLATE_NAME]` | Create a new instance template. |
+| `gcloud compute instance-templates describe [TEMPLATE_NAME]` | Display details of an instance template. |
+| `gcloud compute instance-templates delete [TEMPLATE_NAME]` | Delete an instance template. |
+
+**Example:**
+```bash
+gcloud compute instance-templates list
+gcloud compute instance-templates create instance-template-from-command-line
+gcloud compute instance-templates describe my-instance-template-with-custom-image
+gcloud compute instance-templates delete instance-template-from-command-line
+```
+
+## 6. External Resources
+
+For more comprehensive documentation and advanced usage, refer to these resources:
+
+- **Official Google Cloud SDK Cheat Sheet**: [Reference Guide](https://cloud.google.com/sdk/docs/cheatsheet)
+- **Official gcloud compute instances documentation**: [Google Cloud Docs](https://cloud.google.com/sdk/gcloud/reference/compute/instances)
+- **Awesome Google Cloud**: A curated list of resources - [GitHub](https://github.com/google/awesome-google-cloud)
+- **GCloud Cheat Sheet (Gist)**: Community-contributed cheat sheet - [GitHub Gist](https://gist.github.com/pydevOps/c749d502769910e5d033a36db5285785)
+- **GridU Cheat Sheets**: Various GCP cheat sheets - [GitHub](https://github.com/GridU/GCP-Cheat-Sheets)
+- **Denny Zhang's GCP Cheat Sheet**: [GitHub](https://github.com/dennyzhang/cheatsheet-gcp-A4)
