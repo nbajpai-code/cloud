@@ -101,6 +101,7 @@ gcloud compute instance-templates delete instance-template-from-command-line
 ```
 
 # kubectl cmds
+```bash
 gcloud config set project my-kubernetes-project-304910
 gcloud container clusters get-credentials my-cluster --zone us-central1-c --project my-kubernetes-project-304910
 kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
@@ -136,6 +137,7 @@ gcloud projects list
 kubectl delete service hello-world-rest-api
 kubectl delete deployment hello-world-rest-api
 gcloud container clusters delete my-cluster --zone us-central1-c
+```
 
 ## 6. External Resources
 
