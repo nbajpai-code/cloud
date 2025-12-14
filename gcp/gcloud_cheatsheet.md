@@ -138,7 +138,17 @@ kubectl delete service hello-world-rest-api
 kubectl delete deployment hello-world-rest-api
 gcloud container clusters delete my-cluster --zone us-central1-c
 ```
+## Auth cmds
 
+```bash
+gcloud compute project-info describe
+gcloud auth list
+gcloud projects get-iam-policy glowing-furnace-304608
+gcloud projects add-iam-policy-binding glowing-furnace-304608 --member=user:in28minutes@gmail.com --role=roles/storage.objectAdmin
+gcloud projects remove-iam-policy-binding glowing-furnace-304608 --member=user:in28minutes@gmail.com --role=roles/storage.objectAdmin
+gcloud iam roles describe roles/storage.objectAdmin
+gcloud iam roles copy --source=roles/storage.objectAdmin --destination=my.custom.role --dest-project=glowing-furnace-304608
+```
 ## 6. External Resources
 
 For more comprehensive documentation and advanced usage, refer to these resources:
