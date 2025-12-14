@@ -100,7 +100,7 @@ gcloud compute instance-templates describe my-instance-template-with-custom-imag
 gcloud compute instance-templates delete instance-template-from-command-line
 ```
 
-## kubectl cmds
+# kubectl cmds
 gcloud config set project my-kubernetes-project-304910
 gcloud container clusters get-credentials my-cluster --zone us-central1-c --project my-kubernetes-project-304910
 kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
