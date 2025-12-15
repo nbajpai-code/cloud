@@ -41,3 +41,4 @@ The standard operator for managing Ray applications on Kubernetes.
 - [Anyscale (Managed Ray)](https://www.anyscale.com/)
 - [CNCF Cloud Native AI Whitepaper](https://tag-runtime.cncf.io/wgs/cncf-ai-working-group/)
 - [Scaling AI wirh Ray](https://github.com/debnsuma/vhol-ray-data)
+- [Building scalable AI with Ray](https://www.youtube.com/watch?v=bbKpBTGf_AU)
