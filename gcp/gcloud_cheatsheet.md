@@ -149,6 +149,37 @@ gcloud projects remove-iam-policy-binding glowing-furnace-304608 --member=user:i
 gcloud iam roles describe roles/storage.objectAdmin
 gcloud iam roles copy --source=roles/storage.objectAdmin --destination=my.custom.role --dest-project=glowing-furnace-304608
 ```
+
+## Cloud sql
+
+```bash
+# Cloud SQL
+gcloud sql connect my-first-cloud-sql-instance --user=root --quiet
+gcloud config set project glowing-furnace-304608
+gcloud sql connect my-first-cloud-sql-instance --user=root --quiet
+use todos
+create table user (id integer, username varchar(30) );
+describe user;
+insert into user values (1, 'Ranga');
+select * from user;
+ 
+# Cloud Spanner
+CREATE TABLE Users (
+  UserId   INT64 NOT NULL,
+  UserName  STRING(1024)
+) PRIMARY KEY(UserId);
+ 
+ 
+# Cloud BigTable
+bq show bigquery-public-data:samples.shakespeare
+ 
+gcloud --version
+cbt listinstances -project=glowing-furnace-304608
+echo project = glowing-furnace-304608 > ~/.cbtrc
+cat ~/.cbtrc
+cbt listinstances
+```
+
 ## 6. External Resources
 
 For more comprehensive documentation and advanced usage, refer to these resources:
