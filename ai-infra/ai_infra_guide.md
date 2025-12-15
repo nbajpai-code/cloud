@@ -40,3 +40,4 @@ The standard operator for managing Ray applications on Kubernetes.
 - [KubeRay GitHub](https://github.com/ray-project/kuberay)
 - [Anyscale (Managed Ray)](https://www.anyscale.com/)
 - [CNCF Cloud Native AI Whitepaper](https://tag-runtime.cncf.io/wgs/cncf-ai-working-group/)
+- [Scaling AI wirh Ray](https://github.com/debnsuma/vhol-ray-data)
