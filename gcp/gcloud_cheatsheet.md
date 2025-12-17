@@ -197,6 +197,10 @@ gcloud pubsub topics list
 gcloud pubsub topics delete topic-from-gcloud
 gcloud pubsub topics list-subscriptions my-first-topic
 ```
+## Cloud IAC
+
+
+ * [Terraform Link](https://developer.hashicorp.com/terraform/language/block/resource)
 
 ## 6. External Resources
 
