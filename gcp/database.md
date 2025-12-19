@@ -1,6 +1,6 @@
 # Avro, Parquet, and ORC File Format Comparison
 
-*Based on insights by Ganesh Verma*
+
 
 One of the most important steps in big-data projects is selecting the right file format. When dealing with MapReduce and Spark, the primary concern is the time it takes to locate the relevant/proper information/data. This may have an effect on the overall performance of the job.
 
@@ -94,6 +94,7 @@ This is a portable file format used for storing Arrow tables or data frames (Pyt
 *   **Parquet/ORC:** Widely used in Hadoop. ORC is mostly used in **Hive**, Parquet is the default for **Spark**.
 *   **Avro:** Best for **schema evolution** and ingestion (e.g., Kafka).
 *   **Feather:** Faster read/write with SSDs; standard for data science (Python/R) intermediates.
+*   **Apache Hive Space Directory**(https://cwiki.apache.org/confluence/spacedirectory/view.action)
 
 ---
 ### References
