@@ -94,10 +94,11 @@ This is a portable file format used for storing Arrow tables or data frames (Pyt
 *   **Parquet/ORC:** Widely used in Hadoop. ORC is mostly used in **Hive**, Parquet is the default for **Spark**.
 *   **Avro:** Best for **schema evolution** and ingestion (e.g., Kafka).
 *   **Feather:** Faster read/write with SSDs; standard for data science (Python/R) intermediates.
-*   **Apache Hive Space Directory**(https://cwiki.apache.org/confluence/spacedirectory/view.action)
+  
 
 ---
 ### References
 *   [Apache Hive LanguageManual ORC](https://cwiki.apache.org/confluence/display/hive/languagemanual+orc)
 *   [Wikipedia: Comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values)
 *   Feather V2 with Compression Support in Apache Arrow 0.17.0 (Ursa Labs)
+*   [Apache Hive Space Directory](https://cwiki.apache.org/confluence/spacedirectory/view.action)
